@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ari'nin AGS Rehberi</title>
+<meta name="theme-color" content="#FAF6EE">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Ari AGS">
+<link rel="apple-touch-icon" href="ikon-180.png">
+<link rel="icon" type="image/png" href="ikon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+<div id="filigran" aria-hidden="true">
+  <svg viewBox="0 0 24 24"><path d="M12 2l8.7 5v10L12 22l-8.7-5V7z" fill="currentColor" opacity=".55"/></svg>
+  Mert Hoca
+</div>
+
+<header class="ust">
+  <button class="ayar" data-a="ayarlar" aria-label="Ayarlar">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg>
+  </button>
+  <div class="tarihler">
+    <span class="tarih" id="ustTarih"></span>
+    <span class="geri" id="ustGeri"></span>
+  </div>
+</header>
+
+<main>
+  <section class="sayfa" id="s-bugun"></section>
+  <section class="sayfa" id="s-plan"></section>
+  <section class="sayfa" id="s-konular"></section>
+  <section class="sayfa" id="s-netler"></section>
+</main>
+
+<nav class="alt"><div class="ic">
+  <button data-sekme="bugun" class="aktif">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3l7.8 4.5v9L12 21l-7.8-4.5v-9z"/><path d="M8.5 12.2l2.4 2.3 4.6-4.7" stroke-linecap="round"/></svg>
+    Bugün</button>
+  <button data-sekme="plan">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/><circle cx="8.5" cy="14.5" r=".6" fill="currentColor"/><circle cx="12" cy="14.5" r=".6" fill="currentColor"/><circle cx="15.5" cy="14.5" r=".6" fill="currentColor"/></svg>
+    Plan</button>
+  <button data-sekme="konular">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M8 3.5l3.5 2v4L8 11.5l-3.5-2v-4zM16 3.5l3.5 2v4L16 11.5l-3.5-2v-4zM12 11l3.5 2v4L12 19l-3.5-2v-4z"/></svg>
+    Konular</button>
+  <button data-sekme="netler">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16"/><path d="M5 15l4.5-5 3.5 3 6-7"/><circle cx="19" cy="6" r="1.4" fill="currentColor"/></svg>
+    Netlerim</button>
+</div></nav>
+
+<div id="katman"></div>
+<canvas id="konfeti"></canvas>
+<div id="yazdir"></div>
+
+<script src="plan.js"></script>
+<script src="veri.js"></script>
+<script src="metinler.js"></script>
+<script src="motor.js"></script>
+<script src="uygulama.js"></script>
+</body>
+</html>
